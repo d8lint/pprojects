@@ -1,0 +1,54 @@
+#!/usr/bin/python
+
+#8 ball program
+
+import time, sys, random
+
+def ip():
+	question = raw_input("What is your question? ")
+        return question
+
+def rand():
+        answers = ("It is certain", "It is decidedly so", "Without a doubt", "Yes definitely", "You may rely on it", "As I see it, yes", "Most likely", "Outlook good", "Yes", "signs point to yes", "Reply hazy try again", "Ask again later", "Better not tell you now", "Cannot predict now", "Concentrate and ask again", "Don't count on it", "My reply is no", "My sources say no", "Out not so good", "Very doubtful")
+        answer = random.choice(answers)
+        return answer
+
+def ans():
+	answer = rand()
+        question = ip()
+
+        print "Thinking"
+	time.sleep(3)
+        print ("The answer to: " + question + "\n is:")
+        print answer
+        #print ("Done")
+	time.sleep(2)
+        return;
+
+def rep():
+	rep = raw_input("Do you ahve another question? Y or N: ")
+	
+        while(rep != "n" and rep != "y"):
+            rep = raw_input("you are a fuck tard: (y or n)")
+        
+        if rep == "n":
+	    quit()
+
+        else:
+            main()
+
+        return;
+
+
+def main():
+#        ip()
+        rand()
+        ans()
+        rep()
+        return;
+
+def quit():
+	sys.exit()
+
+
+main()

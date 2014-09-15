@@ -1,0 +1,23 @@
+#!/usr/bin/python
+
+#this is 99 bottles of beer
+
+beer = 99
+
+while beer > 1:
+	print beer, "bottles of beer on the wall!!!"
+	print beer, "bottles of beer!!!!"
+	print "You take one down, pass it around!!!"
+	beer -= 1
+	print beer, "bottles of beer on the wall. \n"
+
+if beer == 1:
+	print beer, "bottle of beer on the wall!!"
+	print beer, "bottle of beer!!"
+	print "take one down pass it around, no more bottles of beer on the wall"
+	print "no more bottles of beer on the wall, no more bottles of beer"
+	beer = 100
+	print "go to the store and buy some more!!" ,beer - 1, "bottles of beer on the wall"
+
+
+
